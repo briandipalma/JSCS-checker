@@ -8,6 +8,7 @@
   "dependencies": {
     "traceur": "0.0.39",
     "es6-module-loader": "0.5.4",
-    "fell": "0.0.2"
+    "fell": "0.0.2",
+    "bluebird": "^1.2.4"
   }
 }
