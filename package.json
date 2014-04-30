@@ -2,11 +2,11 @@
   "name": "jscs-checker",
   "version": "0.0.0",
   "scripts": {
-    "start-node": "traceur src/MainModule.js",
-    "build-node": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
+    "start": "npm run build && node index.js",
+    "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
   "dependencies": {
-    "traceur": "0.0.33",
+    "traceur": "0.0.39",
     "es6-module-loader": "0.5.4"
   }
 }
