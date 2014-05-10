@@ -6,9 +6,9 @@
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
   },
   "dependencies": {
-    "traceur": "0.0.39",
     "fell": "0.0.2",
     "bluebird": "^1.2.4",
-    "jscs": "^1.4.0"
+    "jscs": "^1.4.0",
+    "traceur": "0.0.41"
   }
 }
