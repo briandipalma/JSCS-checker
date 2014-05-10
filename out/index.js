@@ -8,7 +8,6 @@ Object.defineProperties(exports, {
     }},
   __esModule: {value: true}
 });
-var __moduleName = "./src/index";
 var Log = $traceurRuntime.assertObject(require("fell")).Log;
 var $__0 = $traceurRuntime.assertObject(require("path")),
     sep = $__0.sep,
@@ -17,7 +16,7 @@ var Promise = require("bluebird");
 var Checker = require("jscs/lib/checker");
 var checker = new Checker();
 function configureJSCS() {
-  return new Promise(function(resolve, reject) {
+  return new Promise((function(resolve, reject) {
     try {
       var jscsConfiguration = require(join(__dirname, "..", "conf", "jscs.json"));
       checker.registerDefaultRules();
@@ -26,7 +25,7 @@ function configureJSCS() {
     } catch (error) {
       reject(error);
     }
-  });
+  }));
 }
 ;
 function checkFileWithJSCS(filePath) {
@@ -34,8 +33,8 @@ function checkFileWithJSCS(filePath) {
 }
 ;
 function afterJSCSCheck(errors) {
-  errors.getErrorList().forEach(function(error) {
+  errors.getErrorList().forEach((function(error) {
     var explainedError = errors.explainError(error);
     Log.error(explainedError);
-  });
+  }));
 }

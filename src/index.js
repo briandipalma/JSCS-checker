@@ -14,8 +14,7 @@ var checker = new Checker();
  * @returns {Promise} A Promise that resolves once JSCS is created and configured.
  */
 export function configureJSCS() {
-	return new Promise(function(resolve, reject) {
-
+	return new Promise((resolve, reject) => {
 		try {
 			var jscsConfiguration = require(join(__dirname, "..", "conf", "jscs.json"));
 
@@ -47,7 +46,7 @@ export function checkFileWithJSCS(filePath) {
  * @param {jscs/lib/Errors} errors - The JSCS Errors object which can be used to report on all style errors within the checked JS files.
  */
 function afterJSCSCheck(errors) {
-	errors.getErrorList().forEach(function(error) {
+	errors.getErrorList().forEach(error => {
 		var explainedError = errors.explainError(error);
 
 		Log.error(explainedError);
